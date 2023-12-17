@@ -1,0 +1,288 @@
+.modal_fade,
+.modal_fade_edit {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal_cont,
+.modal_cont_edit {
+  display: none;
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.3);
+}
+
+#salir,
+#salir_edit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+#salir:hover,
+#salir_edit:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal_header {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 1px solid #dbdbdb;
+  user-select: none;
+}
+
+.modal_contenido {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.modal_contenido form label {
+  display: block;
+  position: relative;
+}
+
+.modal_contenido form label .span_prin {
+  padding: 5px;
+  background: lightgray;
+  border-radius: 10px 10px 0px 0px;
+  font-weight: bold;
+  font-size: 1.1em;
+  user-select: none;
+}
+
+#span_fecha {
+  font-weight: bold;
+  font-size: 1.1em;
+  user-select: none;
+}
+
+#nom_list,
+#nom_list_edit,
+#desc_tar,
+#fec_tar {
+  background: lightgray;
+  /*border: 5px solid lightgray;*/
+  width: 90%;
+  padding: 15px;
+  border-radius: 10px;
+  outline: 0;
+  border: 0;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+#fec_tar {
+  width: initial;
+  display: none;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+#select_color,
+#select_color_edit {
+  background: lightgray;
+  margin: auto;
+  width: 70%;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 30px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+#selected_box,
+#selected_box_edit {
+  background: lightgray;
+  padding: 10px 10px 10px 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+#selected_box:hover,
+#selected_box_edit:hover {
+  background: rgb(182, 182, 182);
+}
+
+#select_color img,
+#select_color_edit img {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  rotate: 0deg;
+  transition: all 0.2s ease;
+}
+
+#selected_box:hover + img,
+#selected_box_edit:hover + img {
+  top: 15px;
+}
+
+#select_color ul,
+#select_color_edit ul {
+  display: none;
+  position: absolute;
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: lightgray;
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+#select_color ul li,
+#select_color_edit ul li {
+  list-style: none;
+  padding: 5px 10px 10px 10px;
+  border-radius: 10px;
+  margin: 5px 10px;
+}
+
+#select_color ul li,
+#select_color_edit ul li {
+  padding: 10px;
+}
+
+#select_color ul li:hover,
+#select_color_edit ul li:hover {
+  background-color: gray;
+}
+
+#select_color ul li:nth-last-of-type(1),
+#select_color_edit ul li:nth-last-of-type(1) {
+  margin-bottom: 15px;
+}
+
+#select_color ul li .color,
+#selected_box .color,
+#select_color_edit ul li .color,
+#selected_box_edit .color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+}
+
+#select_color ul li span,
+#selected_box span,
+#select_color_edit ul li span,
+#selected_box_edit span {
+  position: relative;
+  bottom: 2px;
+}
+
+#div_radios {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#div_radios label {
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 0.9em;
+  user-select: none;
+}
+
+.fec_radio {
+  appearance: none;
+  /* Safari support */
+  -webkit-appearance: none;
+  height: 1.2rem;
+  width: 1.2rem;
+  border: 0.2rem solid #fff;
+  border-radius: 50%;
+  background-color: lightgray;
+  outline: 2px solid rgb(66, 66, 66);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.fec_radio:checked {
+  background-color: blue;
+}
+
+#error,
+#error_edit {
+  display: none;
+  color: red;
+  font-size: 13px;
+  position: absolute;
+  bottom: 63px;
+  left: 100px;
+}
+
+#btn_crear_lista {
+  background-color: rgb(0, 180, 0);
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn_crear_lista:hover {
+  background-color: green;
+}
+
+#btn_editar_lista,
+#btn_editar_tarea {
+  background-color: gold;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn_editar_lista:hover,
+#btn_editar_tarea:hover {
+  background-color: rgb(224, 191, 0);
+}
+
+@media screen and (max-width: 800px) {
+  .modal-cont {
+    width: 90%;
+  }
+}

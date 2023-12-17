@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "poppins";
+  src: url("../fonts/Poppins/Poppins-Italic.ttf");
+  src: url("../fonts/Poppins/Poppins-Medium.ttf");
+  src: url("../fonts/Poppins/Poppins-Bold.ttf");
+  src: url("../fonts/Poppins/Poppins-Light.ttf");
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #10202b;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  margin: 2px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  /*background: blue;*/
+  background: rgb(150, 150, 150);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  /*background: rgb(0, 0, 123);*/
+  background: rgb(120, 120, 120);
+}

@@ -1,0 +1,152 @@
+@import url("general.css");
+
+#main_list {
+  display: none;
+  position: relative;
+  background: white;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  width: 40%;
+  border-radius: 10px;
+  border-top: 40px solid rgb(0, 185, 0);
+  /*box-shadow: 2px 2px 3px gray;*/
+
+  user-select: none;
+}
+
+#volver {
+  position: absolute;
+  left: 10px;
+  top: -35px;
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+#volver img {
+  width: 30px;
+  height: 30px;
+}
+
+#main_title {
+  margin-bottom: 10px;
+  max-width: 100%;
+  overflow: auto;
+  font-size: 0.8em;
+}
+
+#input_task {
+  background: lightgray;
+  width: 80%;
+  padding: 15px;
+  border-radius: 10px 0px 0px 10px;
+  outline: 0;
+  border: 0;
+  position: relative;
+
+  font-size: 1em;
+  font-weight: 600;
+}
+
+#btn_add {
+  background: rgb(0, 185, 0);
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  padding: 2.5px 10px;
+  color: white;
+  font-weight: bolder;
+  font-size: 33px;
+  border-radius: 0px 10px 10px 0px;
+  position: relative;
+  top: 6px;
+  margin-left: -10px;
+}
+
+#ul_tasks {
+  margin-top: 30px;
+  display: none;
+  max-height: 350px;
+  overflow-y: auto;
+  cursor: grab;
+}
+
+.tarea {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+.li_sel {
+  background: lightgray;
+  box-shadow: 0px 0px 20px rgba(149, 153, 159, 0.16);
+}
+
+.li_drag {
+  opacity: 0;
+}
+
+.tarea span {
+  flex-grow: 2;
+  text-align: left;
+  line-height: 20px;
+  margin: 0px 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.tarea .div_fecha {
+  display: inline-block;
+  background-color: rgba(255, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.check,
+.eliminar,
+.editar {
+  position: relative;
+  cursor: pointer;
+}
+
+.check {
+  width: 25px;
+  height: 25px;
+}
+
+.editar {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+  bottom: 1px;
+}
+
+.editar:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.eliminar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.eliminar:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 700px) {
+  #main_list {
+    width: 90%;
+  }
+}

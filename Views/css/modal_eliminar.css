@@ -1,0 +1,84 @@
+.modal_fade_elim {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal_cont_elim {
+  display: none;
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+#salir_elim {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+#salir_elim:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal_header_elim {
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 20px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.modal_contenido_elim {
+  display: block;
+  text-align: center;
+}
+.modal_contenido_elim p {
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 10px 0px 10px 0px;
+}
+
+#btn_con_elim_lista {
+  background-color: red;
+  border: 0;
+  outline: 0;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 8px 5px 3px 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn_con_elim_lista:hover {
+  background-color: rgb(170, 1, 1);
+}
+
+#btn_con_elim_lista img {
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .modal-cont {
+    width: 90%;
+  }
+}
