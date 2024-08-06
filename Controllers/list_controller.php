@@ -135,7 +135,7 @@ if (isset($_POST['condicional'])) {
             "color" => $reg['color_list']
 
         ];
-        $json = json_encode($json, JSON_PRETTY_PRINT);
+        $json = json_encode($json);
         echo $json;
     }
 
