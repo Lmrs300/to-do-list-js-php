@@ -1,3 +1,3 @@
 <?php
 
-require("Views/paginas/listas.php");
+header("Location: Views/paginas/listas.php");
